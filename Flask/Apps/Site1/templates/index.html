@@ -1,0 +1,96 @@
+<html>
+<head>
+    <title> Template</title>
+    <link rel="stylesheet" type="text/css" href="static/template.css"/>
+    <meta name="viewport" content="width=screen-width, initial-scale=1.0"> 
+</head>
+
+<body>
+
+    <header>
+        <div class='col-12' id="banner">
+            <h1>
+                Ivainir Creative Design
+            </h1>
+            <div class="col-2" id="clock">
+                {{clock}}
+            </div>
+        </div>
+        <div class='col-12' id="menu">
+            <nav>
+                <ul>
+                    <li>
+                       <div class="col-2">
+                        <a class="menubutton" href="index.html">Home</a>
+                        </div> 
+                    </li>
+                    <li>
+                        <div class="col-2">
+                         <a class="menubutton" href="gallery.html">Gallery</a>
+                         </div> 
+                     </li>
+                     <li>
+                        <div class="col-2">
+                         <a class="menubutton" href="contact.html">Contact</a>
+                         </div> 
+                     </li>
+                </ul>
+            </nav>
+        </div>
+   
+
+    </header>
+
+    <main>
+        <div class="col-12" id="row_1">
+            <div class="card">
+                <div class="img_cont">
+                    <img src="{{user_image}}" alt="island">
+                </div>
+                <h3>1A</h3>
+            </div>
+            <div class="card">
+                <div class="img_cont">
+                    <img src="{{user_image}}" alt="island">
+                </div>
+                <h3>1B</h3>
+            </div>
+            <div class="card">
+                <div class="img_cont">
+                    <img src="{{user_image}}" alt="island">
+                </div>
+                <h3>1C</h3>
+            </div>
+        </div>
+        <div class="col-12" id="row_2">
+            <div class="card">
+                <div class="img_cont">
+                    <img src="{{user_image}}" alt="island">
+                </div>
+                <h3>2</h3>
+            </div>
+        </div>
+        <div class="col-12" id="row_3">
+            <div class="card">
+                <div class="img_cont">
+                    <img src="{{user_image}}" alt="island">
+                </div>
+                <h3>3</h3>
+            </div>
+        </div>
+
+    </main>
+
+    <footer>
+        <div class="footer">
+            <h3>Template Website</h3>
+            <p>text</p>
+        </div>
+
+    </footer>
+
+</body>
+
+
+
+</html>

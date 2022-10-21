@@ -1,0 +1,2 @@
+            Ik ben {{age}} jaar oud, en heb van jongs af aan een fascinatie gehad voor computers, zowel hardware als software.
+            Na lange tijd in de richting van Game Design te hebben gewerkt, heb ik er nu voor gekozen om me op Web en Software Development te richten.
