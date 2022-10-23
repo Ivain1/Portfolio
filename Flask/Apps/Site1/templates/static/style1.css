@@ -1,0 +1,89 @@
+:root {
+    --charcoal: #233d4d;
+    --raisinblack: #2e282a;
+    --darkcharcoal: #272727;
+    --smoke: #393838;
+    --alabaster: #e8eddf;
+    --spacecadet: #1b1f3b;
+    --charleston: #293132;
+    --platinum: #e7e7e7;
+    --liberty: #485696;
+
+    --banner: linear-gradient(to bottom right, #233d4d,#272727);
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 14pt;
+
+}
+
+header {
+    margin: -1rem;
+}
+#banner {
+    position: relative;
+    min-height: 10%;
+    top: 0;
+    background: var(--banner);
+    color: var(--platinum);
+    text-align: center;
+    padding: 1rem;
+}
+
+#menu {
+    position: relative;
+    width: 101%;
+    top: 0;
+    left: 0;
+    margin-top: -1rem;
+    margin-left: -1.6rem;
+    text-align: left;
+}
+
+nav ul {
+    list-style-type: none;
+}
+
+
+nav ul li a{
+    text-decoration: none;
+    
+}
+.menubutton {
+    display: block;
+    width: 100%;
+    max-width: 800px;
+    background: var(--banner);
+    color: var(--platinum);
+    padding: .5rem;
+    padding-left: 1rem;
+}
+.menubutton:hover {
+    outline: 2px outset var(--alabaster);
+}
+.menubutton:after {
+    color: var(--liberty);
+}
+
+.row {
+    width: 100%;
+    margin: 1rem;
+    padding: none;
+}
+
+@media only screen and (min-width=768px) {
+    header {
+        background: red;
+    }
+    #menu {
+        display: inline;
+    }
+    nav {
+        display: inline;
+    }
+    .menubutton {
+        width: 20%;
+        max-width: 100px;
+        display: inline;
+    }
+
+    
+}

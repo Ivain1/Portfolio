@@ -1,7 +1,7 @@
 <html>
 <head>
     <title> Template</title>
-    <link rel="stylesheet" type="text/css" href="static/template.css"/>
+    <link rel="stylesheet" type="text/css" href="static/style1.css"/>
     <meta name="viewport" content="width=screen-width, initial-scale=1.0"> 
 </head>
 
@@ -20,19 +20,13 @@
             <nav>
                 <ul>
                     <li>
-                       <div class="col-2">
                         <a class="menubutton" href="index.html">Home</a>
-                        </div> 
                     </li>
                     <li>
-                        <div class="col-2">
-                         <a class="menubutton" href="gallery.html">Gallery</a>
-                         </div> 
+                         <a class="menubutton" href="gallery.html">Gallery</a> 
                      </li>
                      <li>
-                        <div class="col-2">
                          <a class="menubutton" href="contact.html">Contact</a>
-                         </div> 
                      </li>
                 </ul>
             </nav>
@@ -42,49 +36,116 @@
     </header>
 
     <main>
-        <div class="col-12" id="row_1">
-            <div class="card">
-                <div class="img_cont">
-                    <img src="{{user_image}}" alt="island">
+            <div class="row" id="One">
+                <a href="gallery.html"><h1> Gallery</h1></a>
+
+                <hr>
+
+                <div class="card" id="C1">
+                    <a href="project1.html">
+                    <div class="container">
+                        <img src="{{G1}}" alt="image 1">
+                    </div>
+                    <div class="subtext" id="T1">
+                        <h3>Island 1</h3>
+                        <p>This is island 1. It contains 4 biomes, and is about 2000x2000 blocks in size. This text exists mostly as filler, so that's about as far as this goes.</p>
+                    </div>
+                    </a>
                 </div>
-                <h3>1A</h3>
-            </div>
-            <div class="card">
-                <div class="img_cont">
-                    <img src="{{user_image}}" alt="island">
+                <div class="card" id="C2">
+                    <a href="project1.html">
+                    <div class="container">
+                        <img src="{{G2}}" alt="image 2">
+                    </div>
+                    <div class="subtext" id="T2">
+                        <h3>Island 2</h3>
+                        <p>This is island 2. It is approximately 1500x1500 blocks in size, and contains 3 biomes</p>
+                    </div>
+                </a>
                 </div>
-                <h3>1B</h3>
-            </div>
-            <div class="card">
-                <div class="img_cont">
-                    <img src="{{user_image}}" alt="island">
+                <div class="card" id="C3">
+                    <a href="project1.html"></a>
+                    <div class="container">
+                        <img src="{{G3}}" alt="image 3">
+                    </div>
+                    <div class="subtext" id="T3">
+                        <h3>Island 3</h3>
+                        <p>This is island 3</p>
+                    </div>
+                </a>
                 </div>
-                <h3>1C</h3>
+
+                <div class="card" id="C4">
+                    <a href="project1.html">
+                    <div class="container">
+                        <img src="{{G4}}" alt="image 4">
+                    </div>
+                    <div class="subtext" id="T4">
+                        <h3>Island 4</h3>
+                        <p>This is island 4</p>
+                    </div>
+                    </a>
+                </div>
+
+                <div class="card" id="C5">
+                    <a href="project1.html">
+                    <div class="container">
+                        <img src="{{G5}}" alt="image 5">
+                    </div>
+                    <div class="subtext" id="T5">
+                        <h3>Island 5</h3>
+                        <p>This is island 5</p>
+                    </div>
+                    </a>
+                </div>
+
             </div>
+            
+        <div class="row" id="Two">
+            <h1>Text 
+                Columns</h1>
+            <hr>
+            <div class="container">
+                <article>
+                    <h2>Article</h2>
+                    <text>
+                        <p id="par-1">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam cursus fermentum erat, ut mattis eros fringilla in. Aliquam erat volutpat. Donec sed pharetra nisl, et bibendum diam. Proin id mattis dui. Nam sit amet risus sit amet est hendrerit cursus. Aenean eu dui a urna blandit tristique sit amet sit amet velit. Aenean fermentum neque eget dui convallis dignissim. Vivamus vehicula vel nulla id convallis. Sed vitae pharetra felis, sed tempus ligula. Aliquam vehicula eget dui ac pretium. Etiam commodo fermentum urna. 
+                        </p>
+                        <p id="par-2">
+                            Maecenas in libero sit amet erat fermentum consequat vel eget turpis. Mauris enim elit, luctus in sollicitudin vitae, scelerisque vel lectus. Proin urna metus, mattis ut vulputate ut, bibendum non felis. Duis nulla magna, euismod quis ante et, maximus tincidunt felis. Sed eu purus ipsum. Praesent consectetur elit et diam bibendum vulputate ultrices quis ante. Praesent ut felis eget nibh ornare facilisis. 
+                        </p>
+                        <p id="par-3">
+                            In placerat magna vel quam viverra, nec rhoncus diam faucibus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla semper a nulla quis posuere. Phasellus cursus ornare dolor, sit amet posuere augue vestibulum sed. Proin sed ornare arcu. Aenean porta lectus augue, id condimentum orci rutrum quis. Suspendisse sit amet convallis metus, vel consequat turpis. Integer pellentesque ac lectus aliquam molestie. Etiam sit amet ligula ex. Maecenas condimentum ullamcorper tincidunt. Sed tristique orci ante, sit amet viverra massa vehicula vel. Duis aliquet risus massa, non bibendum odio mattis eget. Fusce euismod urna porta enim semper euismod in sit amet purus. Nullam sit amet tincidunt neque. 
+                        </p>
+                        <p id="par-4">
+                            Donec ut leo dapibus, mollis lectus nec, consectetur neque. Maecenas aliquet justo a malesuada bibendum. Cras sodales consectetur ex hendrerit vestibulum. Quisque sit amet nibh tincidunt, condimentum lorem tincidunt, sodales ligula. Donec condimentum augue neque, eu euismod leo eleifend vitae. Nam ut ultrices ligula, ac consequat nisi. Nulla ac nibh odio. Sed volutpat, nunc non cursus egestas, erat metus lobortis metus, id rhoncus neque dui a sapien. Nulla sodales blandit orci, id suscipit libero sagittis quis. Nulla cursus, massa sit amet auctor suscipit, nisi nulla porta velit, eu bibendum mi dui sit amet urna. Fusce sodales pulvinar accumsan. Nunc vestibulum augue sed justo venenatis cursus. Curabitur placerat massa eu magna consectetur ultrices sit amet eu massa. Duis lacus purus, gravida ac aliquam nec, sodales ac nunc. 
+                        </p>
+                        <p id="par-5">
+                            In hac habitasse platea dictumst. Nullam ultricies metus est. Pellentesque feugiat neque vel arcu consectetur, id euismod tortor mattis. Ut ultricies, mi at aliquam congue, lorem nunc sagittis mi, non mollis sem enim sed nisl. Vestibulum pulvinar leo id mi lacinia finibus. Duis pellentesque ligula in nulla posuere congue. Pellentesque imperdiet ultricies est, in fermentum nisl luctus eget. Maecenas efficitur, velit suscipit hendrerit lacinia, ipsum massa porttitor erat, ut mollis libero diam a elit. Phasellus faucibus augue id fringilla gravida. Curabitur a sodales dolor. Mauris tempor ultricies erat quis porttitor. Suspendisse a dolor tincidunt, rhoncus enim semper, pulvinar leo. Duis laoreet felis ac venenatis sollicitudin. Pellentesque condimentum lacus ac nisl feugiat, et iaculis ex cursus. Sed placerat at felis sit amet maximus.
+                        </p>
+                    </text>
+                </article>
+            </div>
+ 
+
         </div>
-        <div class="col-12" id="row_2">
-            <div class="card">
-                <div class="img_cont">
-                    <img src="{{user_image}}" alt="island">
-                </div>
-                <h3>2</h3>
-            </div>
-        </div>
-        <div class="col-12" id="row_3">
-            <div class="card">
-                <div class="img_cont">
-                    <img src="{{user_image}}" alt="island">
-                </div>
-                <h3>3</h3>
-            </div>
+
+        <div class="row" id="Three">
+            <h1>Empty Row Category</h1>
+            <hr>
+            
+
         </div>
 
     </main>
 
     <footer>
         <div class="footer">
-            <h3>Template Website</h3>
-            <p>text</p>
+            <div class="column">
+                <h3>Template Website</h3>
+                <p>copyright Jorn Hiemstra 2022</p>
+            </div>
         </div>
 
     </footer>

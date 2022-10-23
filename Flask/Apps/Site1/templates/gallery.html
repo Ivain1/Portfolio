@@ -1,7 +1,7 @@
 <html>
 <head>
     <title> Template</title>
-    <link rel="stylesheet" type="text/css" href="static/template.css"/>
+    <link rel="stylesheet" type="text/css" href="static/style1.css"/>
     <meta name="viewport" content="width=screen-width, initial-scale=1.0"> 
 </head>
 
@@ -20,19 +20,13 @@
             <nav>
                 <ul>
                     <li>
-                       <div class="col-2">
                         <a class="menubutton" href="index.html">Home</a>
-                        </div> 
                     </li>
                     <li>
-                        <div class="col-2">
-                         <a class="menubutton" href="gallery.html">Gallery</a>
-                         </div> 
+                         <a class="menubutton" href="gallery.html">Gallery</a> 
                      </li>
                      <li>
-                        <div class="col-2">
                          <a class="menubutton" href="contact.html">Contact</a>
-                         </div> 
                      </li>
                 </ul>
             </nav>
@@ -42,49 +36,89 @@
     </header>
 
     <main>
-        <div class="col-12" id="row_1">
-            <div class="card">
-                <div class="img_cont">
-                    <img src="{{G1}}" alt="island">
+            <div class="row" id="One">
+                <a href="gallery.html"><h1> Gallery</h1></a>
+
+                <hr>
+
+                <div class="card" id="C1">
+                    <a href="project1.html">
+                    <div class="container">
+                        <img src="{{G1}}" alt="image 1">
+                    </div>
+                    <div class="subtext" id="T1">
+                        <h3>Island 1</h3>
+                        <p>This is island 1. It contains 4 biomes, and is about 2000x2000 blocks in size. This text exists mostly as filler, so that's about as far as this goes.</p>
+                    </div>
+                    </a>
                 </div>
-                <h3>1A</h3>
-            </div>
-            <div class="card">
-                <div class="img_cont">
-                    <img src="{{G2}}" alt="island">
+                <div class="card" id="C2">
+                    <a href="project1.html">
+                    <div class="container">
+                        <img src="{{G2}}" alt="image 2">
+                    </div>
+                    <div class="subtext" id="T2">
+                        <h3>Island 2</h3>
+                        <p>This is island 2. It is approximately 1500x1500 blocks in size, and contains 3 biomes</p>
+                    </div>
+                </a>
                 </div>
-                <h3>1B</h3>
-            </div>
-            <div class="card">
-                <div class="img_cont">
-                    <img src="{{G3}}" alt="island">
+                <div class="card" id="C3">
+                    <a href="project1.html"></a>
+                    <div class="container">
+                        <img src="{{G3}}" alt="image 3">
+                    </div>
+                    <div class="subtext" id="T3">
+                        <h3>Island 3</h3>
+                        <p>This is island 3</p>
+                    </div>
+                </a>
                 </div>
-                <h3>1C</h3>
+
+                <div class="card" id="C4">
+                    <a href="project1.html">
+                    <div class="container">
+                        <img src="{{G4}}" alt="image 4">
+                    </div>
+                    <div class="subtext" id="T4">
+                        <h3>Island 4</h3>
+                        <p>This is island 4</p>
+                    </div>
+                    </a>
+                </div>
+
+                <div class="card" id="C5">
+                    <a href="project1.html">
+                    <div class="container">
+                        <img src="{{G5}}" alt="image 5">
+                    </div>
+                    <div class="subtext" id="T5">
+                        <h3>Island 5</h3>
+                        <p>This is island 5</p>
+                    </div>
+                    </a>
+                </div>
+
             </div>
+            
+        <div class="row" id="Two">
+           
         </div>
-        <div class="col-12" id="row_2">
-            <div class="card">
-                <div class="img_cont">
-                    <img src="{{G4}}" alt="island">
-                </div>
-                <h3>2</h3>
-            </div>
-        </div>
-        <div class="col-12" id="row_3">
-            <div class="card">
-                <div class="img_cont">
-                    <img src="{{G5}}" alt="island">
-                </div>
-                <h3>3</h3>
-            </div>
+
+        <div class="row" id="Three">
+            
+            
+
         </div>
 
     </main>
 
     <footer>
         <div class="footer">
-            <h3>Template Website</h3>
-            <p>text</p>
+            <div class="column">
+                <h3>Template Website</h3>
+                <p>copyright Jorn Hiemstra 2022</p>
+            </div>
         </div>
 
     </footer>
