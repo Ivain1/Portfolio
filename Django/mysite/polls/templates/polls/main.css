@@ -1,0 +1,153 @@
+body {
+    background-color: #e8eef2;
+    font-family: Verdana;
+    font-size: 16;
+    margin: auto;
+    border: none;
+    border: 7px solid white;
+    overflow-y: none;
+    max-width: 70%;
+    padding: 5px;
+    width: fit-content;
+}
+
+header {
+    background-color: #37393a;
+    text-align: center;
+    color: #C7D3DD;
+    padding: 5px;
+    padding-top: 10px;
+}
+footer {
+    position: static;
+    background-color: #77b6ea;
+    bottom: 0;
+    left: 0;
+    margin-bottom: 0;
+    margin-left: 0;
+    text-align: center;
+    min-width: 99%;
+    width: 100%;
+    padding: 5px;
+    padding-right: 0px;
+    padding-left: 0px;
+}
+
+.main {
+    position: static;
+    min-height: 40vw;
+    min-width: 60vw;
+    max-height: 80vw;
+    background-image: linear-gradient(gainsboro,aliceblue);
+    border: none;
+    top: 0;
+    padding: 5px;
+
+
+}
+
+section {
+    padding: 5px;
+    background-color: white;
+    position: relative;
+    margin: auto;
+    border: 2px inset gray;
+    box-shadow: 2px 2px 2px  gray;
+    min-height: inherit;
+    min-width: inherit;
+    max-width: 80%;
+}
+
+#mijnCV {
+    margin: auto;
+    padding: 10px;
+    line-height: 1.5;
+}
+#mijnCV table{
+    width: 100%;
+    border: 1px solid gray;
+    text-align: center;
+    position: relative;
+    margin: auto;
+}
+#mijnCV table td {
+    border-bottom: 1px solid gray;
+    background-color: aliceblue;
+}
+img {
+    float: right;
+    padding: 1px;
+}
+img:hover {
+    scale: 105%;
+}
+nav {
+    text-align: left;
+    background-color: #77b6ea;
+    width: 100%;
+    max-width: 99vw;
+    min-height: fit-content;
+    padding: 0.5px 0px;
+    font-family: 20;
+    outline: 5px solid #77b6ea;
+}
+.menubutton{
+    background-color: #77b6ea;
+    color: #C7D3DD;
+    display: inline;
+    text-decoration: none;
+    padding: 10px;
+    border-left: 1px solid cornflowerblue;
+    min-width: 40px;
+    min-height: fit-content;
+    font-size: 20px;
+}
+.menubutton:hover {
+    scale: 101%;
+    background-color: cornflowerblue;
+}
+
+.menubutton:active {
+    background-color: cornflowerblue;
+}
+ul.menu li a {
+    color: snow;
+    text-decoration: none;
+    font-size: 18;
+    padding: 5px;
+}
+#contact {
+    position: relative;
+    max-width: 20%;
+    left: 1;
+    text-align: left;
+    margin: 5%;
+}
+form {
+    text-align: left;
+
+}
+#contact input, textarea,button,p  {
+    position: inherit;
+    display: block;
+    margin: 15px;
+    min-width: 100%;
+    max-width: 500px;
+    max-height: 300px;
+    border-radius: 5px;
+}
+button {
+    background-color: #77b6ea;
+    padding: 5px;
+    border-radius: 5px;
+}
+button:hover {
+    scale: 101%;
+    background-color: cornflowerblue;
+}
+button:after, button:active {
+    background-color: cornflowerblue;
+    border-radius: 10px;
+}
+
+
