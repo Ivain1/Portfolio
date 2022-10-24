@@ -80,6 +80,7 @@ h1 {
 }
 main {
     position: relative;
+    color: var(--platinum);
     margin-top: 3%;
     top: 0;
 }
@@ -132,6 +133,20 @@ main {
     font-size: 12pt;
 }
 
+#project1 {
+    display: inline-block;
+    padding: 1rem;
+}
+#island1 {
+    max-height: none;
+    order: 1;
+}
+.main_image  {
+    float: left;
+    max-width: 100%;
+    order:0;
+    margin: 1rem;
+}
 
 footer {
     position: static;
@@ -146,16 +161,6 @@ footer {
     text-align: center;
 }
 
-
-#One {
-    order: 1;
-}
-#Two {
-    order: 0;
-}
-#Three {
-    order: 2;
-}
 
 @media only screen and (min-width:896px) {
     #menu {
@@ -225,6 +230,21 @@ footer {
         columns: 3;
     }
 
-
+    #project1 {
+        columns: 2;
+        width: 98%;
+        height: 80%;
+        margin-left: .5rem;
+    }
+    #island1 {
+        margin: 1rem;
+        columns: 2;
+    }
+    .data {
+        position: relative;
+        left:0;
+        width: 25%;
+        text-align: right;
+    }
     
 }
