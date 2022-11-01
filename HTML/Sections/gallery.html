@@ -1,0 +1,84 @@
+<!DOCTYPE HTML>
+<html>
+   
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content = "IE=Edge">
+        <meta name="viewport" content="width=screen-width, initial-scale=1.0"> 
+        <link rel="stylesheet" href="static/style.css">
+
+
+    </head>
+
+    <body>
+        <header></header>
+
+        <div class="gal_container">
+            <div class="gallery">
+                <div class="img_container">
+                    <img id="gal_main" src="static/IMG/image1.png" alt="Gallery Image" onwheel="image_scroll()">
+                    
+                </div>
+                <div class="button_container">
+                    <img class="gal_button" id="thumb1" alt="Image 1" onclick="gal_button(this)" src="static/IMG/image1.png">
+                    <img class="gal_button" id="thumb2" alt="Image 2" onclick="gal_button(this)" src="static/IMG/image2.png">
+                    <img class="gal_button" id="thumb3" alt="Image 3" onclick="gal_button(this)" src="static/IMG/image3.png">
+                    <img class="gal_button" id="thumb4" alt="Image 4" onclick="gal_button(this)" src="static/IMG/image4.png">
+                    <img class="gal_button" id="thumb5" alt="Image 5" onclick="gal_button(this)" src="static/IMG/image5.png">
+                    
+                </div>
+                <script>
+                    var img_count = Number(0);
+                    const scrollTimeout = setTimeout(image_scroll,5000);
+                    const clickTimeout = setTimeout(gal_button,2000);
+                    function gal_button(thumb) {
+                        var galFullImg = document.getElementById("gal_main");
+                        galFullImg.src = thumb.src;
+                        }
+                    function image_scroll() {
+                        var y = event.deltaY;
+                        var scrollUp = true;
+                        var target_name = 'thumb';
+                        if (y >= 0) {
+                            scrollUp = true;
+                        } else {
+                            scrollUp = false;
+                        }
+                        //alert(scrollUp);
+                        if (scrollUp == true) {
+                            if (img_count <= 4) {
+                                img_count += 1;
+                                //alert(img_count);
+                            }
+                            else {
+                                img_count = 1;
+                                setInterval(7);
+                                //alert(img_count);
+                            }
+                        } else {
+                            if (img_count >= 1) {
+                                img_count += -1;
+                                //alert(img_count);
+                            }
+                            else {
+                            img_count = 5;
+                                //alert(img_count);
+                            }
+                        }
+                        target_num = img_count.toString();
+                        //alert(target_num);
+                        target = target_name.concat(target_num);
+                         //alert(target);
+                        new_image = document.getElementById(target);
+                         //alert(new_image);
+                        old_image = document.getElementById("gal_main");    
+                        old_image.src = new_image.src;
+                    }
+
+                </script>
+
+            </div>
+        </div>
+
+    </body>
+</html>

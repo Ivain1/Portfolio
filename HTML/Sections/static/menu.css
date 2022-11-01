@@ -1,0 +1,51 @@
+:root {
+    --bg: #222222;
+    --sec: #115522;
+    --text: #eeeeed;
+    --accent: #225533;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 14pt;
+}
+
+body {
+    background: var(--bg);
+    color: var(--text);
+}
+header {
+    margin: auto;
+    text-align: center;
+}
+.sidebar {
+    position: sticky;
+    min-width: fit-content;
+    height: 100vh;
+    background: black;
+    width: 5rem;
+    transform: translateX(-1rem) translateY(-3%);
+    float: left;
+    display: flex;
+    flex-direction: column;
+    border-right: .3rem solid var(--accent);
+    transition: width .5s;
+}
+button {
+    transform: translateY(2rem);
+    background: none;
+    border: none;
+    color: var(--text);
+    font-size: 14pt;
+    padding: 1rem;
+    padding-right: 0;
+    padding-left: 1.5rem;
+    width: 100%;
+    text-align: left;
+    transition: all .5s;
+}
+button:hover {
+    background: var(--accent);
+}
+#main {
+    width: 30%;
+    display: flex;
+    background: gray;
+}

@@ -1,0 +1,62 @@
+:root {
+    /*Define custom colors */
+    --charcoal: #233d4d;
+    --raisinblack: #2e282a;
+    --darkcharcoal: #272727;
+    --smoke: #393838;
+    --alabaster: #e8eddf;
+    --spacecadet: #1b1f3b;
+    --charleston: #293132;
+    --platinum: #e7e7e7;
+    --liberty: #485696;
+
+    font-size: 14pt;
+}
+body {
+    background: var(--smoke);
+}
+.gal_container {
+    margin: auto;
+    width: 90%;
+    max-width: 1408px;
+    background: var(--smoke);
+}
+
+.gallery {
+    margin: auto;
+    width: 95%;
+    height: auto;
+    text-align: center;
+}
+.img_container {
+    width: 100%;
+    margin: auto;
+    background: var(--smoke);
+}
+
+.button_container {
+    display: inline-block;
+    width: 100%;
+    box-sizing: border-box;
+    border: 5px inset gray;
+    max-height: 160px;
+    max-width: 100%;
+    
+}
+.gal_button {
+    display: flex;
+    float: left;
+    width: 20%;
+    height: 10%;
+    opacity: 0.8;
+    max-height: fit-content;
+}
+.gal_button:hover{
+    opacity: 1;
+
+}
+#gal_main {
+    width: 100%;
+    box-sizing: border-box;
+    border: 5px inset gray;
+}

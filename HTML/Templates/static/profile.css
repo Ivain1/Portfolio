@@ -1,0 +1,133 @@
+:root {
+    --headers: #3333aa;
+    --banner: linear-gradient(to bottom right,var(--headers),#222277);
+    --smoke: #393838;
+    --darkcharcoal: #272727;
+    --platinum: #e7e7e7;
+    --background: linear-gradient(to bottom right,var(--smoke),var(--darkcharcoal));
+    --text: #e7e7e7;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 14pt;
+    background: var(--background);
+    color: var(--text);
+}
+
+
+body {
+    background-image: var(--background);
+    color: var(--platinum);
+    margin: auto;
+    overflow: hidden;
+}
+.subheader {
+    color: var(--headers);
+}
+header{
+    background: var(--banner);
+    scale: 105%;
+    padding: 1rem;
+    text-align: center;
+    border: 1rem solid var(--banner);
+    color: var(--platinum);
+}
+
+#container {
+    margin: 2%;
+    overflow-y: auto;
+}
+
+
+#photo{
+    float: left;
+    margin: .2rem;
+}
+#name{
+    float: left;
+    transform: translateY(50%);
+    margin-bottom: 1rem;
+}
+
+#pp1 {
+    max-width: 250px;
+    width: 80%;
+    background: transparent;
+}
+#text {
+    float: left;
+
+}
+
+#second_bit {
+    float: right;
+}
+footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    text-align: center;
+    width: 100vw;
+    margin: auto;
+    background-image: var(--banner);
+}
+#copy {
+    position: relative;
+    margin: 1rem;
+}
+
+@media only screen and (min-width:896px) {
+    [class*="col-"] {
+        height: auto;
+        display: inline-block;
+    }
+    .row-1 {
+        float: left;
+        width:100%;
+        height: 33%;
+        overflow-y: auto;
+    }
+    .row-2 {
+        float: left;
+        width: 100%;
+        height: 66%;
+        max-height: 66vh;
+    }
+    .col-1 {width: 8.33%;}
+    .col-2 {width: 16.66%;}
+    .col-3 {width: 25%;}
+    .col-4 {width: 33.33%;}
+    .col-5 {width: 41.66%;}
+    .col-6 {width: 50%;}
+    .col-7 {width: 58.33%;}
+    .col-8 {width: 66.66%;}
+    .col-9 {width: 75%;}
+    .col-10 {width: 83.33%;}
+    .col-11 {width: 91.66%;}
+    .col-12 {width: 100%;}
+    
+    body {
+        margin: auto;
+    }
+    h1,h2,h3 {
+        color: var(--text);
+    }
+    #container {
+        background: transparent;
+    }
+    #name {
+        transform: none;
+    }
+    #pp1 {
+        float: none;
+        margin: 1rem;
+    }
+    #aboutme {
+        width: 100%;
+        min-height: 50%;
+        float: left;
+        columns: 2;
+    }
+    footer {
+        background-image: var(--banner);
+    }
+
+}

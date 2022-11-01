@@ -1,0 +1,22 @@
+<div class="gal_container">
+            <div class="gallery">
+                <div class="img_container">
+                    <img id="gal_main" src="static/IMG/image1.png" alt="Gallery Image">
+                    
+                </div>
+                <div class="button_container">
+                    <img class="gal_button" id="thumb1" alt="Image 1" onclick="gal_button(this)" src="static/IMG/image1.png">
+                    <img class="gal_button" id="thumb2" alt="Image 2" onclick="gal_button(this)" src="static/IMG/image2.png">
+                    <img class="gal_button" id="thumb3" alt="Image 3" onclick="gal_button(this)" src="static/IMG/image3.png">
+                    <img class="gal_button" id="thumb4" alt="Image 4" onclick="gal_button(this)" src="static/IMG/image4.png">
+                    <img class="gal_button" id="thumb5" alt="Image 5" onclick="gal_button(this)" src="static/IMG/image5.png">
+                </div>
+                <script>
+                    function gal_button(thumb) {
+                    var galFullImg = document.getElementById("gal_main");
+                    galFullImg.src = thumb.src;
+                }
+                </script>
+
+            </div>
+        </div>
