@@ -1,0 +1,15 @@
+:root {
+    --background: #333355;
+    --text: #eeeeef;
+    --main: #2288ff;
+    --accent: #22aaff;
+    --dark: #1166ee;
+
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+
+
+}
+#blue {
+    background: var(--main);
+    color: var(--text);
+}

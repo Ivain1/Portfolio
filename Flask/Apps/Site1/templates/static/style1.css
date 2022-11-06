@@ -172,7 +172,6 @@ footer {
     .menubutton {
         float: left;
         position: relative;
-        display: inline-block;
         margin: none;
         margin-top: -1rem;
         width: 20%;

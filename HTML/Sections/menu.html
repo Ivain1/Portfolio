@@ -6,15 +6,9 @@
     <meta name="viewport" content="width=screen-width, initial-scale=1.0"> 
     <link rel="stylesheet" href="static/menu.css">
     
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js">
-    //jQuery    
-        //$(document).ready(function(){
-            
-        //});
-    
-    </script>
+    <script src="scripts/mainScript.js"></script>
 
-    <script>
+    <!--<script>
         //Javascript
         function gotoPage(page){
             //url = location.href;
@@ -69,41 +63,12 @@
             submenu = document.createElement("button");
             self.appendChild(submenu);
         }
-    </script>
-    <script>
-        function loadPage(){
-            const textobj = "Not Blank Either"
-            self.innerHTML = textobj;
-            document.getElementByTag("main").innerHTML = textobj;
-            //document.getElementById("main").innerHTML = "Not Blank";
-
-        }
-
-        function loadDoc() {
-            const xhttp = new XMLHttpRequest();
-            xhttp.onload = function() {
-                document.getElementById("main").innerHTML = this.responseText;
-            }
-            xhttp.open("GET", "test.txt");
-            xhttp.send();
-        }
-
-        window.addEventListener("load",function(){
-            //document.getElementById('main').innerHTML = "Not Blank";
-            var xhttp = new XMLHttpRequest();
-            xhttp.onload = function() {
-                document.getElementById("main").innerHTML = this.responseText;
-            }
-            xhttp.open("POST", "test.txt");
-            xhttp.send();
-        })
-    </script>
+    </script> -->
 
 </head>
 
 <body onload="populateMenu()" onload="loadPage()">
     <header>
-        Empty Header
     </header>
     <div class="sidebar" onmouseover="sidebarExpand(this)" onmouseleave="sidebarContract(this)">
             
@@ -113,8 +78,93 @@
             
         </div>
     </div>
-    <main id="main">Blank text</main>
-    <div onload="loadPage()">Blank Page</div>
-    
+    <div class="gal_container">
+        <h1>Gallery</h1>
+        <div class="gallery">
+            <div class="top-row">
+            <div class="img_container">
+                <img id="gal_main" src="static/IMG/image1.png" alt="Gallery Image" onwheel="image_scroll()">
+            </div>
+            <div class="sidetext">
+                <h2>Island 1</h2>
+                <text>
+                    <p>This is an island project</p>
+                </text>
+
+            </div>
+            </div>
+            <div class="button_container">
+                <img class="gal_button" id="thumb1" alt="Image 1" onclick="gal_button(this)" src="static/IMG/image1.png">
+                <div class="overlay">
+                    <div class="text">Project 1</div>
+                </div>
+                <img class="gal_button" id="thumb2" alt="Image 2" onclick="gal_button(this)" src="static/IMG/image2.png">  <div class="overlay">
+                    <div class="text">Project 2</div>
+                </div>
+                <img class="gal_button" id="thumb3" alt="Image 3" onclick="gal_button(this)" src="static/IMG/image3.png">
+                <div class="overlay">
+                    <div class="text">Project 3</div>
+                </div>
+                <img class="gal_button" id="thumb4" alt="Image 4" onclick="gal_button(this)" src="static/IMG/image4.png">
+                <div class="overlay">
+                    <div class="text">Project 4</div>
+                </div>
+                <img class="gal_button" id="thumb5" alt="Image 5" onclick="gal_button(this)" src="static/IMG/image5.png">
+                <div class="overlay">
+                    <div class="text">Project 5</div>
+                </div>
+            </div>
+            <!--<script>
+                var img_count = Number(0);
+                const scrollTimeout = setTimeout(image_scroll,5000);
+                const clickTimeout = setTimeout(gal_button,2000);
+                function gal_button(thumb) {
+                    var galFullImg = document.getElementById("gal_main");
+                    galFullImg.src = thumb.src;
+                    }
+                function image_scroll() {
+                    var y = event.deltaY;
+                    var scrollUp = true;
+                    var target_name = 'thumb';
+                    if (y >= 0) {
+                        scrollUp = true;
+                    } else {
+                        scrollUp = false;
+                    }
+                    //alert(scrollUp);
+                    if (scrollUp == true) {
+                        if (img_count <= 4) {
+                            img_count += 1;
+                            //alert(img_count);
+                        }
+                        else {
+                            img_count = 1;
+                            setInterval(7);
+                            //alert(img_count);
+                        }
+                    } else {
+                        if (img_count >= 1) {
+                            img_count += -1;
+                            //alert(img_count);
+                        }
+                        else {
+                        img_count = 5;
+                            //alert(img_count);
+                        }
+                    }
+                    target_num = img_count.toString();
+                    //alert(target_num);
+                    target = target_name.concat(target_num);
+                     //alert(target);
+                    new_image = document.getElementById(target);
+                     //alert(new_image);
+                    old_image = document.getElementById("gal_main");    
+                    old_image.src = new_image.src;
+                }
+
+            </script>-->
+
+        </div>
+    </div>
 </body>
 

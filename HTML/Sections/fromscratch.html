@@ -1,0 +1,106 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>Built with Javascript</title>
+        <script>
+            function buildHeader(textContent='This is a header'){
+                //Create the header element and its text content
+                const element = document.createElement('h1');
+                const text = document.createTextNode(textContent);
+                //get the target element
+                const target = document.getElementById("header");
+                //combine the element with text
+                //element.style.background = 'blue';
+                element.appendChild(text);
+                target.appendChild(element);
+
+                //style the header
+                element.style.margin = 'auto';
+                element.style.padding = '1em'
+                element.style.color = '#eeeeed'
+                element.style.background = '#222233'
+                element.style.textAlign = 'center';
+                element.style.border = '1em solid #222233';
+
+                //style the body
+                document.body.style.fontFamily = 'Verdana';
+                document.body.style.margin = '0';
+            }
+            function buildNavBar(type='horizontal'){
+                if (type=='horizontal') {
+                    pass;
+                } else if(type=='vertical') {
+                    pass;
+                } else {
+                    console.log('That is not a valid navbar type');
+                }
+                //const button = document.createElement('button');
+                //const name1 = document.createTextNode('Home');
+            }
+            function buildFooter(){
+                const element = document.createElement('footer');
+                const text = document.createTextNode('Copyright Jorn Hiemstra 2022');
+            }
+
+            function buildElement(targetID,textContent='Empty Element',elementType='div') {
+                const element = document.createElement(elementType);
+                const text = document.createTextNode(textContent);
+                const targer = document.getElementById(targetID);
+                
+                element.appendChild(text);
+                document.self.appendChild(element);
+                document.self.innerHTML = "No Longer Empty";
+
+
+            }
+            function buildButton(targetID,name='Button1', buttonType='normal') {
+                //alert('you clicked');
+                const element = document.createElement('button');
+                const buttonName = document.createTextNode(name);
+                /*if (type=='normal') {
+                    pass;
+                } else if (type=='big') {
+                    pass;
+                }*/
+                const target = document.getElementById('button_test');
+                //alert('Constants created');
+                element.appendChild(buttonName); 
+                target.appendChild(element);
+                //alert('element created');
+                target.style.margin = 'auto';
+                element.style.padding = '5px';
+                element.style.background = '#222233';
+                element.style.color = '#eeeeef';
+                element.style.border = 'none';
+
+            }
+            function insertContent(some) {
+                document.getElementById('content_test').innerHTML = some;
+            }
+
+            function getFile(myCallBack) {
+                let req = new XMLHttpRequest();
+                alert('Request set');
+                req.onload = function() {
+                    if (req.status == 200) {
+                        myCallBack(this.responseText);
+                    } else {
+                        myCallBack("Error: " + req.status);
+                    }
+                }
+                req.open('GET', "content.html");
+                req.send();
+                alert('File Loaded');
+            }
+        </script>
+
+    </head>
+    <body onload="buildHeader('Header Test')" id="content">
+        <div id="header"></div>
+        <div onclick="buildButton('button_text')">This is an empty element</div>
+        <div id="button_test"></div>
+        <div id="content_test" onclick="getFile(insertContent)">Empty Content</div>
+    </body>
+
+
+</html>
