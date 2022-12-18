@@ -1,0 +1,93 @@
+:root {
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 14pt;
+    /*Skill Colors */
+    --html: #00ceaa;
+    --css: #11cdaa;
+    --js: #22ccaa;
+    --ts: #33cbaa;
+    --react: #44caaa;
+    --py: #55c9aa;
+    --flask: #66c8aa;
+    --sql: #77c7aa;
+    
+}
+
+[class*="text-bg-light"] {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+[class*="text-bg-light"]:hover {
+    transform: translateY(-.5em);
+    box-shadow:  0 4px 10px 0 rgba(0, 0, 0, 0.2), 0 6px 25px 0 rgba(0, 0, 0, 0.19);
+}
+h1,h2,h3,h4,h5,h6 {
+    color: navy;
+    font-weight: bold;
+}
+
+#image-box {
+    width: 100%;
+    position: relative;
+    max-height: 200px;
+    margin: auto;
+    transform: scaleX(106%) translateY(-10%);
+}
+
+.profile_pic {
+    width: 100%;
+    display: block;
+    height: auto;
+    max-height: 200px;
+    object-fit: cover;
+}
+.bottom {
+    position: absolute;
+    bottom: 8px;
+    transform: translateX(35%);
+    text-align: center;
+  }
+.profile-details {
+    list-style-type: none;
+}
+li {
+    margin-bottom: 1em;
+}
+
+footer {
+    position: relative;
+    bottom: 0;
+    margin: auto;
+    margin-top: 50%;
+    padding: 1em;
+    background-color: navy;
+    
+}
+.skill_cont {
+    width: 100%;
+    background-color: #ddd;
+    border-radius: 1em;
+    font-size: 10pt;
+}
+.skill_name {
+    float: left;
+    padding-left: 1em;
+}
+.skills {
+    text-align: right;
+    padding-right: 5px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    color: black;
+    margin: 5%;
+    margin-left: 0;
+    border-radius: 1em;
+}
+
+.html {width: 98%; background-color: var(--html);}
+.css {width: 90%; background-color: var(--css);}
+.js {width: 80%; background-color: var(--js);}
+.ts {width: 50%; background-color: var(--ts);}
+.react {width: 50%; background-color: var(--react);}
+.py {width: 70%; background-color: var(--py);}
+.fl {width: 40%; background-color: var(--flask);}
+.sql {width: 25%; background-color: var(--sql);}

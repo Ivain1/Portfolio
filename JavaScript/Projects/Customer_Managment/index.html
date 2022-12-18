@@ -1,0 +1,79 @@
+<!DOCTYPE HTML>
+<html lang="en">
+    <head>
+        <title> Customer Database</title>
+        <link rel="stylesheet" type="text/css" href="styles/style.css"/>
+        <meta name="viewport" content="width=screen-width, initial-scale=1.0"> 
+
+
+    </head>
+    <body>
+        <header>
+        <div id="banner"></div>
+        <nav>
+                <button>File</button>
+
+        </nav>
+
+        </header>
+        <main>
+            <div class="sidebar">
+                <div class="sidemenu">
+                    <button id="myBtn">New Customer</button>
+                </div>
+
+            </div>
+            <div class="customer_form">
+                <span class="close">&times;</span>
+                <form>
+                    Customer Form
+                    <input type="text" id="first_name">
+                    <input type="text" id="'last_name">
+                    
+                    <input type="submit">
+                </form>
+            </div>
+            <div class="content">
+                <button type="button" class="collapsible">John Doe</button>
+                    <div class="client">
+                        <p>
+                            <h2>John Doe</h2>
+                            <table>
+                                <tr>
+                                    <th>Address</th>
+                                    <th>Email</th>
+                                    <th>Phone</th>
+                                </tr>
+                            </table>
+                        </p>
+                    </div>
+                <button type="button" class="collapsible">Jane Doe</button>
+                    <div class="client">
+                        <p>
+                            <h2>Jane Doe</h2>
+                        </p>
+                    </div>
+            </div>
+
+        </main>
+        <footer>
+
+        </footer>
+        <script>
+            var coll = document.getElementsByClassName("collapsible");
+            var i;
+
+            for (i = 0; i < coll.length; i++) {
+            coll[i].addEventListener("click", function() {
+                this.classList.toggle("active");
+                var content = this.nextElementSibling;
+                if (content.style.display === "block") {
+                content.style.display = "none";
+                } else {
+                content.style.display = "block";
+                }
+            });
+            } 
+        </script>
+    </body>
+</html>

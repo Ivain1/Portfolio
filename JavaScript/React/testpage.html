@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  </head>
+  <body>
+
+    <div id="mydiv"></div>
+    <div id="mytable"></div>
+
+    <script type="text/babel">
+      function Hello() {
+        return <h1>Hello World!</h1>;
+      }
+      function Content() {
+        const content = (
+          <table width="500px">
+            <tr>
+              <th>Name</th>
+              <th>Age</th>
+              <th>Gender</th>
+            </tr>
+            <tr>
+              <th>John</th>
+              <th>25</th>
+              <th>Male</th>
+            </tr>
+            <tr>
+              <th>Elsa</th>
+              <th>22</th>
+              <th>Female</th>
+            </tr>
+            
+          </table>
+        )
+        return content;
+      }
+
+      //ReactDOM.render(<Hello />, document.getElementById('mydiv'));
+      ReactDOM.render(<Content />,document.getElementById('mytable'));
+    </script>
+
+  </body>
+</html>

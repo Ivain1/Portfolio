@@ -1,0 +1,89 @@
+:root {
+    --bg: gainsboro;
+    --bg2: #efefee;
+    --text: #252525;
+    --main: #aa5555;
+    --second: #ccbbbb;
+    --accent: #bbeeff;
+    --b_shadow: 2px 2px 5px gray;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+    background: var(--bg);
+    color: var(--text);
+    overflow-x: hidden;
+}
+
+.sidebar {
+    float: left;
+    background: var(--second);
+    min-width: 300px;
+    min-height: 100vh;
+    width: 20%;
+    max-width: 20%;
+    border-right: 4px solid var(--main);
+    box-sizing: border-box;
+}
+.content {
+    float: left;
+    background: var(--bg2);
+    min-width: 400px;
+    width: 80%;
+    min-height: 50vh;
+    height: 100vh;
+}
+nav {
+    position: relative;
+    height: 1em;
+    width: 100%;
+    background: var(--main);
+    padding: 1.5em;
+    transform: translateY(-1em) translateX(-1em);
+
+}
+nav button {
+    background: var(--main);
+    border: none;
+    font-size: 16px;
+}
+nav button:hover {
+    background: var(--second);
+    outline: 2px solid var(--second);
+}
+
+.collapsible {
+    cursor: pointer;
+    width: 100%;
+    background: var(--second);
+    text-align: left;
+    outline: none;
+    border: none;
+    padding: 1em;
+    font-size: 16px;
+    border-bottom: 5px solid var(--main);
+}
+
+.client {
+    display: none;
+    padding: 1em;
+    overflow: hidden;
+    background: var(--bg2);
+    min-height: 200px;
+}
+.active, button:hover {
+    background: var(--main);
+}
+.profile_pic{
+    float: left;
+    background: gray;
+    min-width: 125px;
+    height: 125px;
+    margin: auto;
+    text-align: center;
+}
+.profile_pic img {
+    width: 100%;
+    margin: 1em;
+}
+.client p {
+    float: left;
+}

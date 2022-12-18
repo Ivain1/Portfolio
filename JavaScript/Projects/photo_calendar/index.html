@@ -1,0 +1,112 @@
+<!DOCTYPE HTML>
+
+<html lang="nl">
+    <head>
+        <title>Foto Kalender Bert Holtkamp</title>
+        <link rel="stylesheet" type="text/css" href="static/style/style.css"/>
+        <meta name="viewport" content="width=screen-width, initial-scale=1.0"> 
+        <script src="calendar.js"></script>
+    </head>
+    <body onload="setDate()">
+        <div class="cal-container">
+            <h1>Foto Kalender</h1>
+            <div class="img-container">
+                <img id="image" alt="gallery" width="600px">
+            </div>
+            <div class="date-container">
+                <div id="Date"></div>
+            </div>
+        </div>
+        <script>
+            function tryDate() {
+                document.getElementById('Date').innerHTML = 'Test2';
+            }
+            //let manualDate = new Date(13-05-2022);
+            function setDate() {
+                const t = new Date();
+                let dayList = ["Maandag","Dinsday", "Woensdag", "Donderdag", "Vrijdag","Zaterdag","Zondag"];
+                let monthList = ["Januari","Februari","Maart","April","Mei","Juni","Juli","Augustus","September","Oktober","November","December"];
+                const myDay = dayList[t.getDay()-1];
+                const myMonth = monthList[m];
+                const myYear = t.getFullYear();
+                const myDate = t.getDate();
+                
+                message = 'Niks bijzonders voor deze dag';
+                if (m == 5 && d == 13) {
+                    message = 'De Verjaardag van Iris Hiemstra/Holtkamp'
+                    //Verjaardag Iris
+                }
+                if (m == 11 && d == 11) {
+                    message = 'De Verjaardag van Bert Holtkamp!'
+                }
+                if (m == 12 && d == 31) {
+                    //Oudejaarsag
+                }
+                if (m == 0 && d == 1) {
+                    //Nieuwjaarsdag
+                }
+                if (m == 1 && d == 26){
+                    //Verjaardag Jorn
+                }
+                if (m == 5 && d == 22){
+                    //Verjaardag Eline
+                }
+
+                let dateFormat = `<p><h1>${myDay} ${myDate} ${myMonth} ${myYear}</h1></p>
+                <p>${message}</p>
+                `;
+                theImage = setImage(t);
+                document.getElementById('Date').innerHTML = dateFormat;
+            }
+            function pickImgNum(date) {
+                var subfolder = '';
+                if (date.getMonth == 0,2,4,6,7,9,11){
+                    switch(new Date().getMonth()){
+                        case 0:
+                            subfolder = 'januari';
+                            break;
+                        case 2:
+                            subfolder = 'maart';
+                            break;
+                        case 4:
+                            subfolder = 'mei';
+                            break;
+                        case 6:
+                            subfolder = 'juli';
+                            break;
+                        case 7:
+                            subfolder = 'augustus';
+                            break;
+                        case 9:
+                            subfolder = 'oktober';
+                            break;
+                        case 11:
+                            subfolder = 'december';
+                            break;
+                        default:
+                            subfolder = 'januari';
+
+                    }
+                    output = `static/media/${subfolder}/image${date.getDate()}.jpg`;
+                    //alert(output);
+                    //31 days
+                } else if (date.getMonth == 1){
+                    //february, 28 days
+                } else {
+                    //30 days
+                }
+                return(output);
+            }
+            function setImage(date) {
+                let imgChoice = pickImgNum(date);
+                alert(imgChoice)
+                //alert(imgChoice);
+                //alert(imgNum);
+                //var i = document.getElementByID("gal-img");
+                //myImage = `image${imgNum}.jpg`;
+                //myPath = `static/media/${myImage}`;
+                document.getElementById('image').src = imgChoice;
+            }
+        </script>
+    </body>
+</html>

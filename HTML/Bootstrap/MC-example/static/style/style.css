@@ -15,6 +15,9 @@ body {
     background: var(--background);
     overflow-x: hidden;
 }
+[text-bg-primary] {
+    background: var(--main);
+}
 #blue {
     background: var(--main);
     color: var(--text);
@@ -29,8 +32,12 @@ body {
     color: var(--text);
     text-align: center;
 }
+#card {
+    float: left;
+}
 .card {
     border: none;
+    float: left;
     text-align: center;
     box-sizing: border-box;
     border: 1px solid lightgray;

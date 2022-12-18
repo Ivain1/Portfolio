@@ -3,6 +3,8 @@
     <head>
         <title>Built with Javascript</title>
         <script>
+            var bgColor = '#222233';
+            var textColor = '#eeeeed';
             function buildHeader(textContent='This is a header'){
                 //Create the header element and its text content
                 const element = document.createElement('h1');
@@ -17,10 +19,10 @@
                 //style the header
                 element.style.margin = 'auto';
                 element.style.padding = '1em'
-                element.style.color = '#eeeeed'
-                element.style.background = '#222233'
+                element.style.color = textColor;
+                element.style.background = '#333445';
                 element.style.textAlign = 'center';
-                element.style.border = '1em solid #222233';
+                element.style.border = '1em solid #333445';
 
                 //style the body
                 document.body.style.fontFamily = 'Verdana';
@@ -74,32 +76,64 @@
                 element.style.border = 'none';
 
             }
-            function insertContent(some) {
-                document.getElementById('content_test').innerHTML = some;
+            function content_setup() {
+                //buildHeader();
+                getTextFile("test.txt");
+                //buildElement('section_1','')
+                
+         
+                
             }
+            function getTextFile(file){
+                let x = fetch(file);
+                let y = x.text();
+                document.getElementById("import").innerHTML = "empty";
+                contentDisplay(y);
+            }
+            function contentDisplay(content){
+                document.getElementById("import").innerHTML = "empty";
+            }
+            </script>
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js">
+                $(function(){
+                    $("div.row").css("background","223344");
+                    $("div.row").hover(function(){
+                        $(this).css("background","#223344");
+                    })
 
-            function getFile(myCallBack) {
-                let req = new XMLHttpRequest();
-                alert('Request set');
-                req.onload = function() {
-                    if (req.status == 200) {
-                        myCallBack(this.responseText);
-                    } else {
-                        myCallBack("Error: " + req.status);
-                    }
-                }
-                req.open('GET', "content.html");
-                req.send();
-                alert('File Loaded');
-            }
-        </script>
+                });
+            </script>
+        
+
 
     </head>
-    <body onload="buildHeader('Header Test')" id="content">
+    <body onload="content_setup()" id="content">
         <div id="header"></div>
-        <div onclick="buildButton('button_text')">This is an empty element</div>
-        <div id="button_test"></div>
-        <div id="content_test" onclick="getFile(insertContent)">Empty Content</div>
+        <main>
+            <div class="row">
+                <div id="section_1" onclick="content_setup()">
+                    Test
+                    <div id="import"></div>
+                    <button onclick="getTextFile('test.txt')">Get File</button>
+                </div>
+                
+                
+            </div>
+            <div class="row">
+                <div id="section_2">
+                    Test 2
+
+                </div>
+
+            </div>
+            <div class="row">
+                <div id="section_3">
+                    Test 3
+
+                </div>
+
+            </div>
+        </main>
     </body>
 
 

@@ -114,6 +114,17 @@
                     <div class="text">Project 5</div>
                 </div>
             </div>
+            <div id="demo">empty</div>
+            <script>
+                getText("/fetch_info.txt");
+                
+                async function getText(file) {
+                  let myObject = await fetch(file);
+                  let myText = await myObject.text();
+                  document.getElementById("demo").innerHTML = myText;
+                }
+            </script>
+            
             <!--<script>
                 var img_count = Number(0);
                 const scrollTimeout = setTimeout(image_scroll,5000);
